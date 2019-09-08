@@ -23,9 +23,60 @@ $govuk-canvas-background-colour: $govuk-body-background-colour;
 
 @import "node_modules/govuk-frontend/govuk/all";
 
+// media queries are in node_modules>govuk-frontend>govuk>settings>mediaqueries   mobile 320px - tablet 641px - desktop 769px
 
 // SE custom variables
 $se-footer-background: #eee;
+$se-header-color: #333;
+
+//---------------------------------------- HEADER ------------------------------------------------//
+
+// changes in the CSS of the header
+.govuk-header {
+    background: govuk-colour("white");
+    color: $se-header-color;
+    font-size: 28px;
+    border-bottom: 1px solid #eee;
+  }
+
+.govuk-header__logo {
+    @include govuk-responsive-margin(2, "bottom");
+    padding-right: govuk-spacing(8);
+    @include mq ($from: desktop) {
+      width: 10%;
+    }
+  }
+
+  .govuk-header__title {
+    @include govuk-responsive-margin(2, "bottom");
+    padding-top: govuk-spacing(3);
+    float: left;
+    @include mq ($from: desktop) { 
+      width: 50%;
+    }
+  }
+
+  .govuk-header__content {
+    padding-left: govuk-spacing(8);
+    padding-top: govuk-spacing(5);
+    @include mq ($from: desktop) { 
+      width: 40%; 
+    }
+  }
+
+  .govuk-header__container { // remove the default thick blue line
+    border-bottom: 0px;
+  }
+
+  .govuk-header__link:link, .govuk-header__link:visited { // links of the navigation menu on big screens
+    color: $se-header-color;
+    font-weight: 300;
+    font-size: 18px;
+  }
+
+  .govuk-header__menu-button { // menu displayed on small screens
+      color: $se-header-color;
+  }
 
 // ---------------------------------------- BODY ------------------------------------------------//
 

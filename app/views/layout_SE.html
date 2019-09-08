@@ -17,7 +17,43 @@
   <link href="/public/stylesheets/SE.css" media="all" rel="stylesheet" type="text/css">
 {% endblock %}
 
-{% block header %}{% endblock %}
+{% block header %}
+<!-- added code below for branded header -->
+<header class="govuk-header" role="banner" data-module="header">
+    <div class="govuk-header__container govuk-width-container">
+
+      <div class="govuk-header__logo">
+        <span class="govuk-header__logotype" >
+          <a href="/index.html"><image src="{{ asset_path }}/images/saltire.png" alt="Saltire flag customised" width="70" style="padding-top: 20px"></image></a>
+        </span>
+      </div>
+
+      <div class="govuk-header__title">
+          <span>Service Design</span>
+          <p>Designing in the open</p>
+        </div>
+  
+      <div class="govuk-header__content">
+      <!-- the code below is for navigation links in the header -->
+        <button type="button" role="button" class="govuk-header__menu-button js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+        <nav>
+          <ul id="navigation" class="govuk-header__navigation" aria-label="Top Level Navigation">
+              <li class="govuk-header__navigation-item">
+                <a class="govuk-header__link" href="/navigation/blog">Blog</a>
+              </li>
+              <li class="govuk-header__navigation-item">
+                <a class="govuk-header__link" href="/navigation/about">About</a>
+              </li>
+              <li class="govuk-header__navigation-item">
+                <a class="govuk-header__link" href="/navigation/help">Help</a>
+              </li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+  </header>
+{% endblock %}
 
 {% block footer %}
 <!-- added code below for branded footer -->
