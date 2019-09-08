@@ -13,7 +13,7 @@ Read the [project principles](https://govuk-prototype-kit.herokuapp.com/docs/pri
 
 I have a [draft story on Medium]() explaining the changes I've done.
 
-There is an [exisiting website](https://github.com/scotentSD) using Jekyll that my team is using. 
+There is an [exisiting website](https://scotentsd.github.io/) using Jekyll that my team is using. The [repositories for this are here](https://github.com/scotentSD)
 
 The code in this repository is [deployed on Heroku]().
 
