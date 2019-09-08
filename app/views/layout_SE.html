@@ -18,7 +18,17 @@
 {% endblock %}
 
 {% block header %}{% endblock %}
-{% block footer %}{% endblock %}
+
+{% block footer %}
+<!-- added code below for branded footer -->
+<footer class="govuk-footer" role="contentinfo">
+    <div>
+      <a href="http://bradfrost.com/blog/post/designing-in-the-open/"><img alt="Design in the open logo" src="{{ asset_path }}/images/designintheopen.png" style="width:200px;"></a>
+      <br>
+      <a href="https://github.com/scotentSD"><i class="svg-icon github"></i></a>
+    </div>
+</footer>
+{% endblock %}
 
 {% block bodyEnd %}
   {% include "includes/scripts.html" %}
