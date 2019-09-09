@@ -56,27 +56,33 @@ $se-header-color: #333;
     }
   }
 
-  .govuk-header__content {
-    padding-left: govuk-spacing(8);
-    padding-top: govuk-spacing(5);
-    @include mq ($from: desktop) { 
-      width: 40%; 
-    }
-  }
+.govuk-header__content {
+padding-left: govuk-spacing(8);
+padding-top: govuk-spacing(5);
+@include mq ($from: desktop) { 
+    width: 40%; 
+}
+}
 
-  .govuk-header__container { // remove the default thick blue line
-    border-bottom: 0px;
-  }
+.govuk-header__container { // remove the default thick blue line
+border-bottom: 0px;
+}
 
-  .govuk-header__link:link, .govuk-header__link:visited { // links of the navigation menu on big screens
+.govuk-header__link:link, .govuk-header__link:visited { // links of the navigation menu on big screens
+color: $se-header-color;
+font-weight: 300;
+font-size: 18px;
+}
+
+.govuk-header__menu-button { // menu displayed on small screens
     color: $se-header-color;
-    font-weight: 300;
-    font-size: 18px;
-  }
+}
 
-  .govuk-header__menu-button { // menu displayed on small screens
-      color: $se-header-color;
-  }
+header {
+a:focus{
+        background-color: white; // was putting a thick yellow layer at the bottom of the links
+}
+}
 
 // ---------------------------------------- BODY ------------------------------------------------//
 
